@@ -1,0 +1,51 @@
+<?php
+/*
+Template Name: Info Pizza
+*/
+?>
+
+<?php $pizza_name = get_field('pizza_name'); ?>
+<?php $short_history = get_field('short_history'); ?>
+<?php $price = get_field('price'); ?>
+<?php $ingredients = get_field('ingredients'); ?>
+<?php $image = get_field('photo'); ?>
+
+<?php get_header();?>
+<h1><?php the_title();?></h1>
+<div class="pizza-image-container">
+  <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="pizza-image">
+</div>  
+
+<main class="container-withsidebar-infopizza">
+  <div class="main-content-pizzainfo">
+    <?php while(have_posts()){ the_post();?>
+      <div class="infopizza-details">
+        <div class="history-ingredients-container">
+          <div class="history-info">
+            <h2>History</h2>
+            <p><?php echo $short_history ?></p>
+          </div>
+          <div class="ingredients-info">
+            <h2>Ingredients</h2>
+            <?php
+              if($ingredients) 
+              {
+                echo '<ul>';
+                foreach ($ingredients as $ingredient) 
+                {
+                  echo '<li>' . esc_html($ingredient) . '</li>';
+                }
+                echo '</ul>';
+              }
+            ?>
+          </div>
+        </div>
+      </div>
+      
+    <?php } ?>
+  </div>
+  <div class="pizza-price">
+    <p><?php echo "PRICE: " . $price . "€" ?></p>
+  </div>
+</main>
+<?php get_footer()?>
