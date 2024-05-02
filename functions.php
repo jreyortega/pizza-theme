@@ -13,15 +13,28 @@ add_action('init', 'vistapizza_menus');
 // Scripts and Styles
 function vistapizza_scripts_styles()
 {
-    // Descriptive name, file path, dependencies, version
+    // Enqueue Google Fonts
     wp_enqueue_style('googleFontOswald', 'https://fonts.googleapis.com/css?family=Open+Sans|Oswald|PT+Sans&display=swap', array(), '1.0.0');
     wp_enqueue_style('googleFontPermanentMarker', 'https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap', array(), '1.0.0');
     wp_enqueue_style('googleFontMontserrat', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap', array(), '1.0.0');
+  
+    // Enqueue Normalize CSS
     wp_enqueue_style('normalize', get_template_directory_uri() . '/css/normalize.css', array(), '8.0.1');
+  
+    // Enqueue Style CSS
     wp_enqueue_style('style', get_stylesheet_uri(), array('normalize', 'googleFontOswald', 'googleFontMontserrat', 'googleFontPermanentMarker'), '1.0.0');
-    wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.js', array(), '1.0.0');
+  
+    // Enqueue Scripts JS
+    wp_enqueue_script('sidebar', get_template_directory_uri() . '/js/sidebar.js', array('jquery'), '1.0.0');
+
+    // Check if the current page is the gallery page and enqueue Lightbox CSS and JS
+    if (is_page('gallery')) {
+        // Enqueue Lightbox CSS
+        wp_enqueue_style('lightboxCSS', get_template_directory_uri() . '/css/lightbox.min.css', array(), '2.11.0');
+        // Enqueue Lightbox JS with jQuery as dependency
+        wp_enqueue_script('lightboxJS', get_template_directory_uri() . '/js/lightbox.min.js', array('jquery'), '2.11.0');
+    }
 }
-// Hook: it indicates that these styles (and also scripts) are enqueued to be used in the front-end
 add_action('wp_enqueue_scripts', 'vistapizza_scripts_styles');
 
 // Add thumbnail support
