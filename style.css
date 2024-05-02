@@ -620,7 +620,6 @@ main {
 .card-employee img{
   height:25rem;
   width:25rem;
-  border: 0.5rem solid black;
 }
 
 .card-employee .content{
@@ -667,11 +666,11 @@ main {
 .card-employee img{
   height:25rem;
   width:25rem;
-  border: 0.5rem solid black;
 }
 
 .card-employee .content{
   margin-left: 3rem;
+  margin-right: 3rem;
   width: 80rem;
 }
 
@@ -689,6 +688,21 @@ main {
   margin-right: 15rem;
 }
 
+.odd {
+  justify-content: center;
+  text-align: justify;
+  align-items: center;
+}
+
+.even {
+  justify-content: center;
+  text-align: justify;
+  align-items: center;
+}
+
+.employee-thumbnail {
+  padding-top: 8rem;
+}
 /*****************SINGLE-EMPLOYEE***********/
 
 .main-content-infoemployee{
