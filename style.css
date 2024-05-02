@@ -747,6 +747,10 @@ main {
   margin-bottom: 2rem;
 }
 
+.odd {
+  margin-left: 2.5rem;
+}
+
 .card-employee img{
   height:25rem;
   width:25rem;

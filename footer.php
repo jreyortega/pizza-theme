@@ -11,7 +11,9 @@
   <footer class="site-footer">
     <div class="footer-logo">
       <p>Vista</p>
-      <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png">
+      <a href="<?php echo esc_url(home_url('/')); ?>">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png">
+      </a>
       <p>Pizza</p>
     </div>
     <div class="info-footer">
