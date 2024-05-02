@@ -116,7 +116,7 @@ main {
 
 .header-info {
   padding-top: 4rem;
-  height: 10rem;
+  height: 10.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -393,6 +393,19 @@ main {
   font-family: var(--fontMontserrat);
 }
 
+/****************************PAGE PIZZA*****************************/
+
+.body-page-pizza{
+  display: flex;
+  flex-direction: row;
+}
+
+.container.withsidebar{
+  display:flex;
+  flex-direction: row;
+  margin-left:30rem;
+}
+
 /*************************** LIST PIZZAS ***************************/
 .pizzas {
   text-align: center;
@@ -480,18 +493,52 @@ main {
 
 /*****************************PIZZASMENU-SIDEBAR**************************/
 
+.container-sidebar{
+  display: flex;
+  flex-direction: row;
+}
 
+.pizza-sidebar-dropdown{
+  height: 5rem;
+  width: 5rem;
+  background-color: var(--mycolordarkred);
+  align-content: center;
+  justify-content: center;
+  padding-left: 0.3rem;
+  transition: transform 0.3s ease;
+}
+
+.pizza-sidebar-dropdown.active{
+  transform:translateX(-30rem)
+}
+
+.pizza-sidebar-dropdown img{
+  height: 4rem;
+  width: 4rem;
+}
+
+.container.withsidebar-pizza{
+  margin-left: 15rem;
+  transition: transform 0.3s ease;
+}
+
+.container.withsidebar-pizza.active{
+  transform:translateX(-15rem)
+}
 
 .sidebar-pizzasmenu{
   background-color: var(--mycolordarkred);
-  max-height:50rem;
+  height:100%;
   width: 30rem;
   overflow-y: auto;
   padding-left:3rem;
   padding-top: 1rem;
   padding-bottom: 2rem;
-  border-radius: 1rem;
-  border: 0.5rem solid var(--mycolordarkdarkred);
+  transition: transform 0.3s ease;
+}
+
+.sidebar-pizzasmenu.active{
+  transform:translateX(-100%)
 }
 
 .sidebar-pizzasmenu h3{
@@ -504,8 +551,30 @@ main {
   color:#ffffff;
 }
 
+.sidebar-pizzasmenu .widget{
+  height: 90%;
+}
 
-/*PAGE INFOPIZZAS*/
+.sidebar-pizzasmenu .widget h3{
+  margin-bottom: 1rem;
+}
+
+.sidebar-pizzasmenu .widget ul{
+  height: 90%;
+  padding-left: 1.5rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sidebar-pizzasmenu .widget li a p{
+  transition: transform 0.3s ease;
+}
+
+.sidebar-pizzasmenu .widget li a p:hover{
+  transform: scale(1.1);
+}
+
+/*************************************PAGE INFOPIZZAS*****************************/
 
 .container-withsidebar-infopizza{
   width: 170rem;
@@ -591,17 +660,33 @@ main {
 
 /**************************************PAGE-EMPLOYEES****************************/
 
-.container-withsidebar-employee{
+.container-sidebar-pizza{
+  display: flex;
+  flex-direction: row;
+}
+
+.body-page-employee{
+  display: flex;
+  flex-direction: row;
+}
+
+.container.withsidebar-employee{
+  display:flex;
+  flex-direction: row;
+  margin-left:30rem;
+}
+
+.container.withsidebar-employee{
   display: flex;
   flex-direction: row;
 
 }
 
-.container-withsidebar-employee .main-content{
+.container.withsidebar-employee .main-content{
   margin-left: 15rem;
 }
 
-.container-withsidebar-employee .main-content h1{
+.container.withsidebar-employee .main-content h1{
   margin-bottom:6rem;
 }
 
@@ -638,17 +723,16 @@ main {
   margin-right: 15rem;
 }
 
-.container-withsidebar-employee{
+.container.withsidebar-employee{
   display: flex;
   flex-direction: row;
-
 }
 
-.container-withsidebar-employee .main-content{
+.container.withsidebar-employee .main-content{
   margin-left: 15rem;
 }
 
-.container-withsidebar-employee .main-content h1{
+.container.withsidebar-employee .main-content h1{
   margin-bottom:6rem;
 }
 
@@ -683,6 +767,88 @@ main {
   margin-top:10rem;
   margin-left:10rem;
   margin-right: 15rem;
+}
+/*****************************EMPLOYEE SIDEBAR************************************/
+
+.container-sidebar-employee{
+  display: flex;
+  flex-direction: row;
+}
+
+.employee-sidebar-dropdown{
+  height: 5rem;
+  width: 5rem;
+  background-color: var(--mycolordarkred);
+  align-content: center;
+  justify-content: center;
+  padding-left: 0.3rem;
+  transition: transform 0.3s ease;
+}
+
+.employee-sidebar-dropdown.active{
+  transform:translateX(-30rem)
+}
+
+.employee-sidebar-dropdown img{
+  height: 4rem;
+  width: 4rem;
+}
+
+.container.withsidebar-employee{
+  margin-left: 15rem;
+  transition: transform 0.3s ease;
+}
+
+.container.withsidebar-employee.active{
+  transform:translateX(-23rem)
+}
+
+.sidebar-employee{
+  margin:0rem 0rem 0rem 0rem;
+  background-color: var(--mycolordarkred);
+  height:100%;
+  width: 30rem;
+  overflow-y: auto;
+  padding-left:3rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-employee.active{
+  transform:translateX(-100%)
+}
+
+.sidebar-employee h3{
+  font-family: var(--fontMontserrat);
+  color:#ffffff;
+}
+
+
+.sidebar-employee .widget{
+  height: 90%;
+}
+
+.sidebar-employee .widget h3{
+  margin-bottom: 1rem;
+}
+
+.sidebar-employee .widget ul{
+  height: 90%;
+  padding-left: 1.5rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sidebar-employee .widget li a {
+  transition: transform 0.3s ease;
+  font-family: var(--fontMontserrat);
+  font-size: 2rem;
+  color:#ffffff;
+}
+
+.sidebar-employee .widget li a:hover{
+  transform: scale(1.1);
 }
 
 /*****************SINGLE-EMPLOYEE***********/
