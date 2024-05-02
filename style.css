@@ -606,14 +606,18 @@ main {
   border-left:0.3rem solid var(--mycolordarkred);
 }
 
-.ingredients-info li{
-  padding-bottom:1rem;
+.ingredients-info li {
+  list-style-type: none; /* Remove default list marker */
+  padding-bottom: 1rem;
   font-size: 2rem;
-  padding-left: 5rem;
+  line-height: 2rem; /* Adjust line height to center the text vertically */
 }
 
+
 .ingredients-info ul{
+  list-style-type: disc;
   overflow-y: scroll;
+  text-align: center;
 }
 
 .history-ingredients-container{
@@ -701,7 +705,6 @@ main {
 .card-employee img{
   height:25rem;
   width:25rem;
-  border: 0.5rem solid black;
 }
 
 .card-employee .content{
@@ -747,11 +750,11 @@ main {
 .card-employee img{
   height:25rem;
   width:25rem;
-  border: 0.5rem solid black;
 }
 
 .card-employee .content{
   margin-left: 3rem;
+  margin-right: 3rem;
   width: 80rem;
 }
 
@@ -851,6 +854,21 @@ main {
   transform: scale(1.1);
 }
 
+.odd {
+  justify-content: center;
+  text-align: justify;
+  align-items: center;
+}
+
+.even {
+  justify-content: center;
+  text-align: justify;
+  align-items: center;
+}
+
+.employee-thumbnail {
+  padding-top: 8rem;
+}
 /*****************SINGLE-EMPLOYEE***********/
 
 .main-content-infoemployee{

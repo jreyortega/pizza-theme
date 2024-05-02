@@ -10,15 +10,16 @@ Template Name: Info Pizza
 <?php $ingredients = get_field('ingredients'); ?>
 <?php $image = get_field('photo'); ?>
 
-<?php get_header();?>
-<h1><?php the_title();?></h1>
+<?php get_header(); ?>
+<h1><?php the_title(); ?></h1>
 <div class="pizza-image-container">
-  <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="pizza-image">
-</div>  
+  <?php the_post_thumbnail('blog'); ?>
+</div>
 
 <main class="container-withsidebar-infopizza">
   <div class="main-content-pizzainfo">
-    <?php while(have_posts()){ the_post();?>
+    <?php while (have_posts()) {
+      the_post(); ?>
       <div class="infopizza-details">
         <div class="history-ingredients-container">
           <div class="history-info">
@@ -28,24 +29,22 @@ Template Name: Info Pizza
           <div class="ingredients-info">
             <h2>Ingredients</h2>
             <?php
-              if($ingredients) 
-              {
-                echo '<ul>';
-                foreach ($ingredients as $ingredient) 
-                {
-                  echo '<li>' . esc_html($ingredient) . '</li>';
-                }
-                echo '</ul>';
+            if ($ingredients) {
+              echo '<ul>';
+              foreach ($ingredients as $ingredient) {
+                echo '<li>' . esc_html($ingredient) . '</li>';
               }
+              echo '</ul>';
+            }
             ?>
           </div>
         </div>
       </div>
-      
+
     <?php } ?>
   </div>
   <div class="pizza-price">
     <p><?php echo "PRICE: " . $price . "€" ?></p>
   </div>
 </main>
-<?php get_footer()?>
+<?php get_footer() ?>
