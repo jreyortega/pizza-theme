@@ -917,6 +917,7 @@ main {
   grid-template-columns: repeat(2,1fr);
   grid-gap: 2rem;
   margin-bottom: 4rem;
+  margin-top: 8rem;
 }
 
 @media (min-width:768px) {

@@ -17,13 +17,13 @@ function vistapizza_scripts_styles()
     wp_enqueue_style('googleFontOswald', 'https://fonts.googleapis.com/css?family=Open+Sans|Oswald|PT+Sans&display=swap', array(), '1.0.0');
     wp_enqueue_style('googleFontPermanentMarker', 'https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap', array(), '1.0.0');
     wp_enqueue_style('googleFontMontserrat', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap', array(), '1.0.0');
-  
+
     // Enqueue Normalize CSS
     wp_enqueue_style('normalize', get_template_directory_uri() . '/css/normalize.css', array(), '8.0.1');
-  
+
     // Enqueue Style CSS
     wp_enqueue_style('style', get_stylesheet_uri(), array('normalize', 'googleFontOswald', 'googleFontMontserrat', 'googleFontPermanentMarker'), '1.0.0');
-  
+
     // Enqueue Scripts JS
     wp_enqueue_script('sidebar', get_template_directory_uri() . '/js/sidebar.js', array('jquery'), '1.0.0');
 
@@ -108,23 +108,27 @@ function vistapizza_list_employees($n)
                             <?php the_post_thumbnail('square'); ?>
                         </div>
                     </a>
-                    <a href="<?php the_permalink(); ?>">
-                        <div class="content">
-                            <?php $name = get_field('name'); ?>
+
+                    <div class="content">
+                        <?php $name = get_field('name'); ?>
+                        <a href="<?php the_permalink(); ?>">
                             <h3><?php echo $name; ?></h3>
-                            <?php $bibliografy = get_field('bibliografy') ?>
-                            <p><?php echo $bibliografy; ?></p>
-                        </div>
-                    </a>
+                        </a>
+                        <?php $bibliografy = get_field('bibliografy') ?>
+                        <p><?php echo $bibliografy; ?></p>
+                    </div>
+
                 <?php } else { ?>
-                    <a href="<?php the_permalink(); ?>">
-                        <div class="content">
-                            <?php $name = get_field('name'); ?>
+
+                    <div class="content">
+                        <?php $name = get_field('name'); ?>
+                        <a href="<?php the_permalink(); ?>">
                             <h3><?php echo $name; ?></h3>
-                            <?php $bibliografy = get_field('bibliografy') ?>
-                            <p><?php echo $bibliografy; ?></p>
-                        </div>
-                    </a>
+                        </a>
+                        <?php $bibliografy = get_field('bibliografy') ?>
+                        <p><?php echo $bibliografy; ?></p>
+                    </div>
+
                     <a href="<?php the_permalink(); ?>">
                         <div class="employee-thumbnail">
                             <?php the_post_thumbnail('square'); ?>
