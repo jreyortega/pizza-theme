@@ -34,6 +34,8 @@ function vistapizza_scripts_styles()
         // Enqueue Lightbox JS with jQuery as dependency
         wp_enqueue_script('lightboxJS', get_template_directory_uri() . '/js/lightbox.min.js', array('jquery'), '2.11.0');
     }
+
+    wp_enqueue_script('script', get_template_directory_uri() . '/js/script.js', array('jquery'), '1.0.0');
 }
 add_action('wp_enqueue_scripts', 'vistapizza_scripts_styles');
 
@@ -170,4 +172,25 @@ function vistapizza_widgets()
     ));
 }
 add_action('widgets_init', 'vistapizza_widgets');
+?>
+
+<?php
+    function vistapizza_main_image(){
+        //obtain page id
+        $front_page_id = get_option('page_on_front');
+        //obtain image id
+        $id_image = get_field('image_heading',$front_page_id);
+        //obtain the image
+        $image = wp_get_attachment_image_src( $id_image,'full')[0];
+        //CSS
+        wp_register_style('custom',false) ;
+        wp_enqueue_style( 'custom' );
+        $image_css = "
+            body.home .site-header {
+                background-image: linear-gradient(to right,rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url($image);
+            }
+        " ;
+        wp_add_inline_style( 'custom', $image_css );
+    }
+    add_action('init' , 'vistapizza_main_image');
 ?>

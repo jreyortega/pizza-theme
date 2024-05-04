@@ -13,8 +13,10 @@ Template Name: Info Employee
       <?php $bibliografy = get_field('bibliografy'); ?>
       <?php $incorporation_date = get_field('incorporation_date'); ?>
       <?php $specialization = get_field('specialization'); ?>
-      <?php the_post_thumbnail('square', array('class' => 'image-class-employee')); ?>
-      
+
+      <div class="infoemployee-image">
+        <?php the_post_thumbnail('square', array('class' => 'image-class-employee')); ?>
+      </div>
       <div class="employee-info-content">
         <h1><?php echo $name; ?></h1>
         <h3><?php echo $incorporation_date; ?></h3>
