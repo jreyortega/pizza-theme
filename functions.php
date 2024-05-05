@@ -35,6 +35,7 @@ function vistapizza_scripts_styles()
         wp_enqueue_script('lightboxJS', get_template_directory_uri() . '/js/lightbox.min.js', array('jquery'), '2.11.0');
     }
 
+    // Counter
     wp_enqueue_script('script', get_template_directory_uri() . '/js/script.js', array('jquery'), '1.0.0');
 }
 add_action('wp_enqueue_scripts', 'vistapizza_scripts_styles');

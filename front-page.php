@@ -3,27 +3,34 @@
 Template Name: Front Page
 */
 ?>
-<?php get_header('front');?>
+<?php get_header('front'); ?>
 
 <section class="welcome container">
-    <h2><?php the_field('title_welcome'); ?></h2>
+    <h1><?php the_field('title_welcome'); ?></h1>
     <p><?php the_field('content_welcome'); ?></p>
 </section>
 
 <section class="main-games">
     <div class="container">
-        <h2>Our pizzas</h2>
+        <h1>Our pizzas</h1>
         <?php vistapizza_list_pizzas(6); ?>
-        <div class="button-container">
-            <a href="<?php echo esc_url(get_permalink(get_page_by_title('Pizzas'))); ?>" class="button">See All</a>
+        <div class="header-shopping-cart">
+            <a href="<?php echo esc_url(get_permalink(get_page_by_title('Pizzas'))); ?>">
+                <p>See all</p>
+            </a>
         </div>
     </div>
 </section>
 
 <section class="sellers">
     <div class="container">
-        <h2>Our staff</h2>
+        <h1>Our staff</h1>
         <?php vistapizza_list_employees(2); ?>
+        <div class="header-shopping-cart">
+            <a href="<?php echo esc_url(get_permalink(get_page_by_title('Employees'))); ?>">
+                <p>See all</p>
+            </a>
+        </div>
     </div>
 </section>
 
@@ -33,7 +40,7 @@ Template Name: Front Page
         <?php the_field('date_countdown'); ?>
     </p>
     <div class="container">
-        <h2>Next conference</h2>
+        <h1>Next conference</h1>
         <div class="countdown-numbers">
             <div class="days">
                 <p class="number" id="days"></p>
