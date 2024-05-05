@@ -12,8 +12,8 @@ Template Name: Front Page
 
 <section class="main-games">
     <div class="container">
-        <h2>Our games</h2>
-        <?php vistapizza_list_pizzas(4); ?>
+        <h2>Our pizzas</h2>
+        <?php vistapizza_list_pizzas(6); ?>
         <div class="button-container">
             <a href="<?php echo esc_url(get_permalink(get_page_by_title('Pizzas'))); ?>" class="button">See All</a>
         </div>
@@ -22,8 +22,8 @@ Template Name: Front Page
 
 <section class="sellers">
     <div class="container">
-        <h2>Our sellers</h2>
-        <?php vistapizza_list_employees(10); ?>
+        <h2>Our staff</h2>
+        <?php vistapizza_list_employees(2); ?>
     </div>
 </section>
 
