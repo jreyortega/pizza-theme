@@ -14,10 +14,12 @@ Template Name: Front Page
     <div class="container">
         <h1>Our pizzas</h1>
         <?php vistapizza_list_pizzas(6); ?>
-        <div class="header-shopping-cart">
-            <a href="<?php echo esc_url(get_permalink(get_page_by_title('Pizzas'))); ?>">
-                <p>See all</p>
-            </a>
+        <div class="see-all-container">
+            <div class="header-shopping-cart">
+                <a href="<?php echo esc_url(get_permalink(get_page_by_title('Pizzas'))); ?>">
+                    <p>See all</p>
+                </a>
+            </div>
         </div>
     </div>
 </section>

@@ -1141,3 +1141,12 @@ main {
   height: 100%;
   width: 50rem; 
 }
+
+/***********************************FRONT PAGE************************************/
+.see-all-container {
+  display: flex;
+  justify-content: center;
+  margin-left: 0rem;
+  margin-top: 3rem;
+  align-items: center;
+}
