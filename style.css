@@ -1417,4 +1417,12 @@ main {
     margin-left: 0;
     margin-right: 0;
   }
+
+  .see-all-container {
+    margin-bottom: 5rem;
+  }
+
+  .employee-thumbnail {
+    padding-top: 3rem;
+  }
 }
