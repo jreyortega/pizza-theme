@@ -306,8 +306,12 @@ main {
     transition: height 0.3s ease; 
   }
 
-  .body-page-employee.droped{
-    transform:translateY(40rem)
+  .body-page.droped{
+    transform:translateY(35rem)
+  }
+
+  .site-footer.droped{
+    transform:translateY(30rem)
   }
 
   .header-menu.droped .menu{
@@ -355,8 +359,12 @@ main {
     transform: rotate(180deg);
   }
 
-  .body-page-employee.droped .container-sidebar-employee{
+  .body-page.droped .container-sidebar-employee{
     display:none;
+  }
+
+  .body-page.droped .container-sidebar-pizza{
+    display:none!important;
   }
 
 }
@@ -516,7 +524,7 @@ main {
 
 /****************************PAGE PIZZA*****************************/
 
-.body-page-pizza{
+.body-page{
   display: flex;
   flex-direction: row;
 }
@@ -725,7 +733,7 @@ main {
 
 @media (max-width:768px){
 
-  .body-page-pizza{
+  .body-page{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -857,7 +865,7 @@ main {
   flex-direction: row;
 }
 
-.body-page-employee{
+.body-page{
   display: flex;
   flex-direction: row;
 }
@@ -956,7 +964,7 @@ main {
 }
 
 @media (max-width:768px){
-  .body-page-employee{
+  .body-page{
     display: flex;
     flex-direction: column;
     width: 100%;

@@ -6,7 +6,7 @@ Template Name: Employees
 
 <?php get_header(); /*get the header*/ ?>
 
-<div class="body-page-employee">
+<div class="body-page">
     <?php $path = get_template_directory_uri(); ?>
     <div class="container-sidebar-employee">
         <?php get_sidebar('employee'); ?>

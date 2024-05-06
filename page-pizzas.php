@@ -6,7 +6,7 @@ Template Name: Pizzas
 
 <?php get_header(); /*get the header*/?>
 
-<div class="body-page-pizza">
+<div class="body-page">
     <?php $path = get_template_directory_uri(); ?>
     <div class="container-sidebar-pizza">
         <?php get_sidebar( ); ?>

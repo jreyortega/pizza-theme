@@ -6,7 +6,7 @@ Template Name: Contact Page
 
 <?php get_header(); /*get the header*/ ?>
 
-<div class="body-page-contact">
+<div class="body-page">
     <main class="container withsidebar-contact">
         <div class="main-contact-form">
             <?php while (have_posts()) {
