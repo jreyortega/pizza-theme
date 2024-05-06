@@ -699,6 +699,11 @@ main {
   .card a {
     margin-bottom: 0.5rem;
   }
+
+  .container.withsidebar-pizza {
+    margin-left: 0;
+    width: 100%;
+  }
 }
 
 
@@ -713,7 +718,7 @@ main {
 }
 
 .container.withsidebar-pizza{
-  margin:right
+  margin: right
 }
 
 .pizza-sidebar-dropdown{
@@ -1226,7 +1231,6 @@ main {
 .main-content-infoemployee img{
   height:60rem;
   width:60rem;
-  border: 1rem solid black;
 }
 
 .employee-info-content{
@@ -1252,6 +1256,53 @@ main {
   display:flex;
   flex-direction: row;
 } */
+
+.container-withsidebar-infoemployee{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+}
+.main-content-infoemployee{
+  display: flex;
+  flex-direction: column !important;
+  justify-content: center;
+  margin-left: 0rem;
+}
+
+.main-content-infoemployee img{
+  height: 40rem;
+  width: 40rem;
+
+}
+
+.infoemployee-image{
+  display: flex;
+  justify-content: center;
+}
+
+.employee-info-content{
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.employee-info-content h1{
+  font-size: 7rem;
+}
+
+.employee-info-content h2{
+  text-align: center;
+  margin-top: 7rem;
+}
+
+.employee-info-content h3{
+  text-align: center;
+}
+
+.bibliografy-specializations-info {
+  margin-left: 30rem;
+  margin-right: 30rem;
+}
 
 @media (max-width:768px) {
 
@@ -1293,6 +1344,10 @@ main {
   }
 
 
+  .bibliografy-specializations-info {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
 }
 
 
@@ -1649,8 +1704,28 @@ main {
     margin-left: 3rem;
     margin-right: 3rem;
   }
-}
 
+  .container.nosidebar {
+    align-items: center;
+    justify-content: center;
+    margin-left: 10rem;
+  }
+
+  .blog-card {
+    max-width: 50rem;
+    width: 50rem;
+    min-width: none;
+  }
+
+  .blog-card img {
+    max-width: 50rem;
+    min-width: none;
+  }
+
+  .blog-card .content {
+    max-width: 50rem;
+  }
+}
 /**************************************BLOG SIDEBAR********************************/
 
 .body-page-blog{
