@@ -4,7 +4,7 @@
 */
 
 get_header(); ?>
-<div class="body-page"
+
   <main class="container">
     <div class="main-content">
       <?php while (have_posts()) {
@@ -39,6 +39,6 @@ get_header(); ?>
       <?php } ?>
     </div>
   </main>
-</div>
+
 
 <?php get_footer() ?>

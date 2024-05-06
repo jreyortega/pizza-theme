@@ -3,10 +3,9 @@
 Template Name: Front Page
 */
 ?>
-<?php get_header(); ?>
+<?php get_header('front'); ?>
 
-
-<div class="body-page">
+<div class="body-page-main">
     <section class="welcome container">
         <h1><?php the_field('title_welcome'); ?></h1>
         <p><?php the_field('content_welcome'); ?></p>

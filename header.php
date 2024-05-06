@@ -25,17 +25,6 @@
       </div>
     </div>
     <div class="menu-container">
-      <?php $path = get_template_directory_uri(); ?>
-      
-      <?php
-      $args = array(
-        'theme_location' => 'header-menu',
-        'container' => 'nav',
-        'container_class' => 'header-menu'
-      );
-      wp_nav_menu($args);
-      ?>
-      <div class="header-menu-image"><img  src="<?php echo $path; ?>/img/bxs-up-arrow.svg" alt="Menu" /></div>
     </div>
   </header>
 </body>

@@ -306,8 +306,14 @@ main {
     transition: height 0.3s ease; 
   }
 
-  .body-page.droped{
-    transform:translateY(35rem)
+  .body-page-main{
+    transition: transform 0.3s ease;
+
+  }
+
+  .body-page-main.droped{
+
+    transform:translateY(25rem)
   }
 
   .site-footer.droped{
@@ -357,14 +363,6 @@ main {
 
   .header-menu-image.droped img{
     transform: rotate(180deg);
-  }
-
-  .body-page.droped .container-sidebar-employee{
-    display:none;
-  }
-
-  .body-page.droped .container-sidebar-pizza{
-    display:none!important;
   }
 
 }
