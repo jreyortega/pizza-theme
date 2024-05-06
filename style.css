@@ -20,6 +20,8 @@ Text Domain: pizzashop
   --mycolorred: #7c0d05;
   --mycolordarkred: #5a0a03;
   --mycolordarkdarkred: #3f0602;
+  --mycolorlightred: #a41a0a;
+  --mycolorlightlightred: #ff9e97;
   --fontMontserrat: 'Montserrat', sans-serif;
   --fontOpenSans: 'Open Sans', sans-serif;
   --fontPTSans: 'PT Sans', sans-serif;
@@ -1533,4 +1535,118 @@ main {
     margin: 2rem 5rem 2rem 5rem;
   }
 
+}
+
+
+/** BLOG **/
+.blog-card {
+  position: relative;
+  margin-right: 1rem;
+  margin-left: 3.3rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  flex: 0 0 calc(50% - 25rem);
+  margin-bottom: 1rem;
+  margin-top: 4rem;
+  min-width: 35rem;
+}
+
+.blog-card a {
+  margin-bottom: 3rem;
+}
+
+.blog-card:last-of-type {
+  margin-right: 0;
+}
+
+.blog-card img {
+  display: block;
+  border-radius: 0.5rem;
+  transition: transform .3s ease-in, filter .3s ease-in;
+}
+
+.blog-card .content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  padding-left: 3rem;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+.blog-card:hover img {
+  filter: none;
+}
+
+.blog-card h3,
+.blog-card p {
+  color: white; /* White text */
+}
+
+.blog-card h3 {
+  margin: 0;
+  font-family: var(--fontOswald);
+}
+
+.blog-card p {
+  margin: 5px 0;
+  font-weight: bold;
+  font-family: var(--fontPTSans);
+}
+
+.blog-card p span {
+  color: black;
+}
+
+.blog-card {
+  width: 70rem;
+  min-width: 70rem;
+}
+.blog-card a{
+  color: white;
+}
+
+.meta{
+  color: black;
+  font-weight: bold;
+}
+
+.meta a{
+  color: var(--mycolorlightlightred);
+}
+
+.list-blog{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.post-categories a{
+  font-size: 1.5rem;
+}
+
+.p {
+  text-align: justify;
+}
+
+.main-content-blog li {
+  font-size: 1.7rem;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.main-content-blog h1 {
+  font-family: var(--fontMontserrat);
+  font-size: 7rem;
+  color: var(--mycolorred);
+  margin-top: 7rem;
+  text-align: left; 
+}
+
+@media (max-width:768px) {
+  .container.withsidebar {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
 }
