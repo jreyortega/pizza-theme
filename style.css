@@ -198,12 +198,28 @@ main {
 
 .menu-container {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   height: 4.5rem;
   width: 100%;
   margin-top: 5rem;
   background-color: var(--mycolorred);
   overflow: hidden;
+}
+
+.menu-container p{
+  margin: 0.5rem 0rem 0rem 0rem;
+
+}
+
+.go-back-button{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  width: 15rem;
+  background-color: #ffffff00;
+  border:solid #ffffff00;
+  left:1rem;
 }
 
 .header-menu {
@@ -365,13 +381,17 @@ main {
     transform: rotate(180deg);
   }
 
+  .go-back-button{
+    top:7.75rem;
+  }
+
 }
 
 /***************************FOOTER***************************/
 .site-footer {
   height: auto;
   background-color: var(--mycolorred);
-  margin-top: 5rem;
+  
 }
 
 .app-links {
@@ -667,6 +687,8 @@ main {
   transform:translateX(-30rem)
 }
 
+
+
 .pizza-sidebar-dropdown img{
   height: 4rem;
   width: 4rem;
@@ -680,6 +702,8 @@ main {
 .container.withsidebar-pizza.active{
   transform:translateX(-15rem)
 }
+
+
 
 .sidebar-pizzasmenu{
   background-color: var(--mycolordarkred);
@@ -763,6 +787,10 @@ main {
   }
 
   .container.withsidebar-pizza.active{
+    transform:translateY(-20rem)
+  }
+
+  .site-footer.active{
     transform:translateY(-20rem)
   }
 
