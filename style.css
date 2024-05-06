@@ -586,6 +586,8 @@ main {
 }
 
 /*************************** LIST PIZZAS ***************************/
+
+
 .pizzas {
   text-align: center;
 }
@@ -698,11 +700,18 @@ main {
 }
 
 
+
+
+
 /*****************************PIZZASMENU-SIDEBAR**************************/
 
 .container-sidebar{
   display: flex;
   flex-direction: row;
+}
+
+.container.withsidebar-pizza{
+  margin:right
 }
 
 .pizza-sidebar-dropdown{
@@ -1497,4 +1506,31 @@ main {
 
 .sellers{
   margin-bottom: 10rem;
+}
+
+
+/********************************ABOUT-US***********************************/
+
+
+
+.body-page-about-us{
+  display: flex;
+  justify-content: center;
+  font-family: var(--fontMontserrat);
+}
+
+.container-about-us{
+  margin: 2rem 20rem 2rem 20rem;
+}
+
+@media(max-width:768px){
+
+  .body-page-about-us h1{
+    font-size: 8rem;
+  }
+
+  .container-about-us{
+    margin: 2rem 5rem 2rem 5rem;
+  }
+
 }

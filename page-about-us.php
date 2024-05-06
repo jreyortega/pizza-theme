@@ -6,8 +6,8 @@ Template Name: About Us
 
 <?php get_header(); /*get the header*/?>
 
-<div class="body-page">
-    <main class="container withsidebar">
+<div class="body-page-about-us">
+    <main class="container-about-us">
         <div class="main-content">
             <?php while(have_posts()){ the_post();/*initialise WordPress Loop*/?>
             <h1><?php the_title();/*Title of your page */?></h1>
@@ -15,8 +15,6 @@ Template Name: About Us
             <p><?php the_content();/*Content of your page*/?></p>
             <?php } ?>
         </div>
-        <h1>This will show the about us</h1>
-        <?php get_sidebar( ); ?>
     </main>
 </div>
 <?php get_footer() /*get the footer*/?>
