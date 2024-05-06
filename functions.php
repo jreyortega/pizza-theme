@@ -37,6 +37,7 @@ function vistapizza_scripts_styles()
 
     // Counter
     wp_enqueue_script('script', get_template_directory_uri() . '/js/script.js', array('jquery'), '1.0.0');
+    wp_enqueue_script('menu', get_template_directory_uri() . '/js/menu.js', array('jquery'), '1.0.0');
 }
 add_action('wp_enqueue_scripts', 'vistapizza_scripts_styles');
 

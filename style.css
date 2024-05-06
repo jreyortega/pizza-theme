@@ -241,13 +241,26 @@ main {
   cursor: pointer;
 }
 
+.header-menu-image{
+  display:none;
+}
+
 @media (max-width:768px){
+
+  .header-menu .menu:hover {
+    background-color: #008c9900;
+  }
+
+  .header-menu .menu li:hover {
+    background-color: #008c9900;
+  }
 
   .header-logo-name p{
     font-size:5rem;
   }
 
   .header-shopping-cart{
+    padding-left: 0rem;
     width: 7rem;
     height: 6rem;
   }
@@ -256,10 +269,94 @@ main {
     display:none;
   }
 
+  .header-menu{
+    height: 100%;
+    margin-top: 4rem;
+    display:flex;
+    justify-content: flex-end;
+  }
+
   .header-shopping-cart img{
     padding-top: 0rem;
-    width: 5rem;
-    margin-right: 3rem;
+    padding-left:0rem;
+    height: 3.5rem;
+    width: 4rem;
+    margin-right: 0rem;
+  }
+
+  #menu-header-menu{
+    display: flex;
+    height:100%;
+    width: 100%;
+    margin-right: 2rem;
+    z-index:-2;
+    justify-content:center;
+  }
+
+  #menu-header-menu li{
+    position:absolute;
+    top:16rem;
+    transition: all 0.3s ease;
+    margin-left:23rem;
+    z-index:-2;
+  }
+
+  .menu-container.droped{
+    height: 25rem;
+    transition: height 0.3s ease; 
+  }
+
+  .body-page-employee.droped{
+    transform:translateY(40rem)
+  }
+
+  .header-menu.droped .menu{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    height: 20rem !important;
+    width: 15rem;
+    z-index: 99999!important;
+  }
+
+  .header-menu.droped li{
+    position:relative!important;
+    top:-1rem!important;
+  }
+
+  .header-menu-image{
+    position:absolute;
+    display:flex !important;
+    width: 3rem;
+    height: 3rem;
+    justify-content: center;
+    right:2rem;
+    z-index:9999999;
+  }
+
+  .header-menu-image img{
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .menu-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 4.5rem;
+  }
+
+  .header-menu .menu{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-menu-image.droped img{
+    transform: rotate(180deg);
+  }
+
+  .body-page-employee.droped .container-sidebar-employee{
+    display:none;
   }
 
 }
@@ -595,6 +692,45 @@ main {
 
 .sidebar-pizzasmenu .widget li a p:hover{
   transform: scale(1.1);
+}
+
+@media (max-width:768px){
+
+  .body-page-pizza{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .container-sidebar-pizza{
+    flex-direction: column!important;
+  }
+
+  .sidebar-pizzasmenu{
+    width: 100%;
+    transition: transform 0.3s ease;
+    z-index:-2!important;
+  }
+
+  .sidebar-pizzasmenu .widget ul{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    overflow-x:scroll;
+  }
+
+  .sidebar-pizzasmenu.active{
+    transform:translateY(-100%);
+    z-index:-5!important;
+  }
+
+  .pizza-sidebar-dropdown.active{
+    transform:translateY(-19.2rem);
+  }
+
+  .container.withsidebar-pizza.active{
+    transform:translateY(-20rem)
+  }
+
 }
 
 /*************************************PAGE INFOPIZZAS*****************************/
@@ -949,7 +1085,7 @@ main {
   .sidebar-employee{
     width: 100%;
     transition: transform 0.3s ease;
-    z-index:-1!important;
+    z-index:-2!important;
   }
 
   .sidebar-employee .widget ul{
@@ -960,7 +1096,7 @@ main {
 
   .sidebar-employee.active{
     transform:translateY(-100%);
-    z-index:-1!important;
+    z-index:-5!important;
   }
 
   .employee-sidebar-dropdown.active{
@@ -1082,7 +1218,7 @@ main {
   grid-row: 5 / 7;
 }
 
-@media (min-width:768px) {
+@media (max-width:768px) {
   .gallery-images li:nth-child(3){
     grid-row: 1 / 3;
   }
@@ -1091,6 +1227,8 @@ main {
     grid-row: 3 / 5;
     grid-column: 4 / 5;
   }
+
+
 }
 
 /*******************************************CONTACT FORM*******************************/
@@ -1104,7 +1242,7 @@ main {
   font-family: var(--fontMontserrat);
 }
 
-#wpcf7-f159-p157-o1{
+.wpcf7.no-js{
   width: 60rem;
   margin-right: 8rem;
   padding: 2rem 2rem 2rem 2rem;
@@ -1137,9 +1275,46 @@ main {
   background-color: #3f0602;
 }
 
-.leaflet-map.WPLeafletMap.leaflet-container.leaflet-touch.leaflet-retina.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom{
-  height: 100%;
-  width: 50rem; 
+.leaflet-map{
+  height: 67rem !important;
+  width: 100% !important; 
+}
+
+@media(max-width:768px){
+  .container.withsidebar-contact{
+    flex-direction: column;
+  }
+
+  .wpcf7.no-js{
+    width: 100% !important;
+  }
+
+  .main-contact-form h1{
+    font-size:7rem;
+  }
+
+  .wpcf7.no-js label{
+    display: inline-block;
+    width: 100% !important;
+  }
+
+  .wpcf7.no-js input{
+    display: inline-block;
+    width: 100% !important;
+  }
+
+  .wpcf7.no-js textarea{
+    display: inline-block;
+    width: 100% !important;
+  }
+
+  .main-contact-form .content{
+    flex-direction: column;
+  }
+
+  .leaflet-map{
+    margin-top: 5rem;
+  }
 }
 
 /***********************************FRONT PAGE************************************/
