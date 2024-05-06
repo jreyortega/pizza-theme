@@ -11,7 +11,7 @@ Template Name: Front Page
         <p><?php the_field('content_welcome'); ?></p>
     </section>
 
-    <section class="main-games">
+    <section class="main-pizzas">
         <div class="container">
             <h1>Our pizzas</h1>
             <?php vistapizza_list_pizzas(6); ?>

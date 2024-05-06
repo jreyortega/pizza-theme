@@ -494,7 +494,7 @@ main {
 
 .footer-menu-container .menu {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-right: 20rem;
   align-items: center;
 }
@@ -507,6 +507,8 @@ main {
   margin: 0;
   padding: 0;
 }
+
+
 
 .footer-menu-container li {
   padding-top: 1rem;
@@ -526,6 +528,36 @@ main {
 
 .footer-menu-container a:hover {
   font-weight: bold;
+}
+
+@media(max-width:768px){
+  .info-footer{
+    display: flex;
+    flex-direction: column;
+  }
+  .app-links{
+    margin-left: 0rem;
+    text-align: center;
+  }
+
+  .site-footer{
+    height: 70rem;
+  }
+
+  .copyright-container{
+    position:relative;
+    bottom: -31rem;
+  }
+
+  .footer-menu .menu{
+    margin-right: 0rem;
+  }
+
+  .footer-social-media{
+    margin-right: 0rem;
+    text-align: center;
+  }
+
 }
 
 /*************************** ABOUT US ***************************/
@@ -1459,4 +1491,10 @@ main {
   .employee-thumbnail {
     padding-top: 3rem;
   }
+}
+
+/**************************************MAIN PAGE********************************/
+
+.sellers{
+  margin-bottom: 10rem;
 }
