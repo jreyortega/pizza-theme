@@ -574,6 +574,10 @@ main {
 
 }
 
+.main-content p {
+  text-align: justify;
+}
+
 /*************************** ABOUT US ***************************/
 .about-us-content h1 {
   font-family: var(--fontMontserrat);
