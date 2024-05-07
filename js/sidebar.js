@@ -46,11 +46,30 @@
         });
     });
 
+    document.addEventListener('DOMContentLoaded', function() {
+
+        console.log('DOMContentLoaded event fired');
+
+        var dropdown = document.querySelector('.blog-sidebar-dropdown');
+        var sidebar = document.querySelector('.sidebar-recent-entries');
+        var blogcontent = document.querySelector('.blog-content');
+        var footer = document.querySelector('.site-footer');
+
+        dropdown.addEventListener('click', function() {
+            if (sidebar.classList.contains('active')) {
+                sidebar.classList.remove('active');
+                dropdown.classList.remove('active');
+                blogcontent.classList.remove('active');
+                footer.classList.remove('active');
+            } else {
+                sidebar.classList.add('active');
+                dropdown.classList.add('active');
+                blogcontent.classList.add('active');
+                footer.classList.add('active');
+            }
+        });
+    });
+
 })();
 
-(function(){
-
-    
-
-})();
 
