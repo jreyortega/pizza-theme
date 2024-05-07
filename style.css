@@ -674,7 +674,7 @@ main {
   font-size: 23px;
 }
 
-@media only screen and (max-width: 768px) {
+@media(max-width: 768px) {
   .list-pizzas {
     flex-direction: column;
     align-items: center;
@@ -701,7 +701,7 @@ main {
   }
 
   .container.withsidebar-pizza {
-    margin-left: 0;
+    margin-left: 0!important;
     width: 100%;
   }
 }
@@ -790,7 +790,6 @@ main {
   height: 90%;
   padding-left: 1.5rem;
   overflow-y: auto;
-  overflow-x: hidden;
 }
 
 .sidebar-pizzasmenu .widget li a p{
@@ -817,12 +816,32 @@ main {
     width: 100%;
     transition: transform 0.3s ease;
     z-index:-2!important;
+    padding-left:1rem!important;
+    padding-right: 1rem!important;
+    
   }
 
+  .sidebar-pizzasmenu .widget {
+    width: 100%;    
+  }
+
+  .sidebar-pizzasmenu .widget h3{
+    text-align: center;
+    
+  }
+
+
   .sidebar-pizzasmenu .widget ul{
-    display:grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    overflow-x:scroll;
+    display:flex;
+    height:20rem;
+    flex-direction: column;
+    text-align: center;
+    overflow-y:scroll;
+  }
+
+  .sidebar-pizzasmenu .widget ul li{
+    /* display:inline-block;
+    margin-right:2rem; */
   }
 
   .sidebar-pizzasmenu.active{
@@ -831,7 +850,7 @@ main {
   }
 
   .pizza-sidebar-dropdown.active{
-    transform:translateY(-19.2rem);
+    transform:translateY(-30.5rem);
   }
 
   .container.withsidebar-pizza.active{
@@ -1809,4 +1828,64 @@ main {
 
 .blog-content.active{
   transform:translateX(20rem)
+}
+
+@media (max-width:768px){
+
+  .body-page-blog{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .blog-content{
+    order:2;
+  }
+
+  .container-sidebar-blog{
+    flex-direction: column!important;
+    order:1;
+  }
+
+  .sidebar-recent-entries{
+    width: 100%;
+    transition: transform 0.3s ease;
+    z-index:-2!important;
+    order:1;
+  }
+
+  .sidebar-recent-entries .widget ul{
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(120px, 1fr)); /* Filas de altura mínima de 120px */
+    grid-auto-columns: 120px; /* Ancho de columna de 120px */
+    gap: 10px; /* Espacio entre elementos */
+    overflow-x: auto; /* Desbordamiento horizontal */
+    white-space: nowrap; /* Evita que los elementos se envuelvan */
+  }
+
+  .sidebar-recent-entries.active{
+    transform:translateY(-100%);
+    z-index:-5!important;
+  }
+
+  .blog-sidebar-dropdown{
+    order:2;
+  }
+
+  .blog-sidebar-dropdown.active{
+    transform:translateY(-12.5rem);
+  }
+
+  .blog-content.active{
+    transform:translateY(-20rem)
+  }
+
+  .site-footer{
+    transition: transform 0.3s ease;
+  }
+
+  .site-footer.active{
+    transform:translateY(-20rem)
+  }
+
 }
