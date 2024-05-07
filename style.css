@@ -794,8 +794,6 @@ main {
   overflow-y: auto;
 }
 
-
-
 @media (max-width:768px){
 
   .body-page{
@@ -852,7 +850,8 @@ main {
   }
 
   .container.withsidebar-pizza.active{
-    transform:translateY(-20rem)
+    transform:translateY(-20rem);
+    margin-top: 0rem!important;
   }
 
   .site-footer.active{
@@ -863,14 +862,14 @@ main {
 
 /*************************************PAGE INFOPIZZAS*****************************/
 
-.container-withsidebar-infopizza{
-  width: 170rem;
+.container-nosidebar-infopizza{
+  width: 100%
 }
 
 .main-content-pizzainfo{
-  margin-left: 10rem;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .main-content-pizzainfo .image-class{
@@ -880,7 +879,16 @@ main {
 }
 
 .infopizza-details{
-  margin-left: 10rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.history-info{
+  padding-right: 4rem;
+}
+
+.ingredients-info{
+  padding-left: 4rem;
 }
 
 .main-content-pizzainfo h1{
@@ -895,8 +903,8 @@ main {
 
 .ingredients-info li {
   list-style-type: none; /* Remove default list marker */
-  padding-bottom: 1rem;
-  font-size: 2rem;
+  padding-bottom: 2rem;
+  font-size: 2.5rem;
   line-height: 2rem; /* Adjust line height to center the text vertically */
 }
 
@@ -910,6 +918,7 @@ main {
 .history-ingredients-container{
   display: grid;
   grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+  height:30rem;
 }
 
 .pizza-image-container{
@@ -928,24 +937,71 @@ main {
 }
 
 .history-info p {
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-align: justify;
   line-height: 1.5;
-  padding-right: 5rem;
+  text-align: center;
 }
 
 .pizza-price {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5rem;
-  margin-left: 20rem;
+
 }
 
 .pizza-price p {
-  font-size: 40px;
+  font-size: 6rem;
   font-weight: bold;
+  margin:0rem 0rem 0rem 0rem;
   color: var(--mycolordarkred);
+}
+
+@media(max-width:768px){
+  .body-page-infopizza h1{
+    font-size: 7rem;
+  }
+
+  .container-nosidebar-infopizza{
+    width:100%;
+  }
+  .main-content-pizzainfo{
+    text-align: center;
+    margin-left: 0rem;
+  }
+
+  .history-ingredients-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .infopizza-details{
+    width: 100%;
+    margin-left: 0rem;
+  }
+
+  .history-info{
+    width: 20rem;
+    padding-right: 4rem;
+  }
+
+  .ingredients-info{
+    padding-left: 4rem;
+  }
+
+  .history-info p{
+    text-align: center;
+  }
+
+  .pizza-price{
+    margin:0rem 0rem 0rem 0rem;
+  }
+
+  .pizza-price p{
+    margin:0rem 0rem 0rem 0rem;
+  }
+
 }
 
 

@@ -11,40 +11,43 @@ Template Name: Info Pizza
 <?php $image = get_field('photo'); ?>
 
 <?php get_header(); ?>
-<h1><?php the_title(); ?></h1>
-<div class="pizza-image-container">
-  <?php the_post_thumbnail('blog'); ?>
-</div>
+<div class="body-page-infopizza">
+  <h1><?php the_title(); ?></h1>
+  <div class="pizza-price">
+      <p><?php echo "PRICE: " . $price . "€" ?></p>
+  </div>
+  <div class="pizza-image-container">
+    <?php the_post_thumbnail('blog'); ?>
+  </div>
 
-<main class="container-withsidebar-infopizza">
-  <div class="main-content-pizzainfo">
-    <?php while (have_posts()) {
-      the_post(); ?>
-      <div class="infopizza-details">
-        <div class="history-ingredients-container">
-          <div class="history-info">
-            <h2>History</h2>
-            <p><?php echo $short_history ?></p>
-          </div>
-          <div class="ingredients-info">
-            <h2>Ingredients</h2>
-            <?php
-            if ($ingredients) {
-              echo '<ul>';
-              foreach ($ingredients as $ingredient) {
-                echo '<li>' . esc_html($ingredient) . '</li>';
+  <main class="container-nosidebar-infopizza">
+    <div class="main-content-pizzainfo">
+      <?php while (have_posts()) {
+        the_post(); ?>
+        <div class="infopizza-details">
+          <div class="history-ingredients-container">
+            <div class="history-info">
+              <h2>History</h2>
+              <p><?php echo $short_history ?></p>
+            </div>
+            <div class="ingredients-info">
+              <h2>Ingredients</h2>
+              <?php
+              if ($ingredients) {
+                echo '<ul>';
+                foreach ($ingredients as $ingredient) {
+                  echo '<li>' . esc_html($ingredient) . '</li>';
+                }
+                echo '</ul>';
               }
-              echo '</ul>';
-            }
-            ?>
+              ?>
+            </div>
           </div>
         </div>
-      </div>
 
-    <?php } ?>
-  </div>
-  <div class="pizza-price">
-    <p><?php echo "PRICE: " . $price . "€" ?></p>
-  </div>
-</main>
+      <?php } ?>
+    </div>
+    
+  </main>
+</div>
 <?php get_footer() ?>
