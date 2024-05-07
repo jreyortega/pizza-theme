@@ -878,10 +878,7 @@ main {
   border: 1rem solid black;
 }
 
-.infopizza-details{
-  display: flex;
-  flex-direction: row;
-}
+
 
 .history-info{
   padding-right: 4rem;
@@ -974,11 +971,6 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: center;
-  }
-
-  .infopizza-details{
-    width: 100%;
-    margin-left: 0rem;
   }
 
   .history-info{

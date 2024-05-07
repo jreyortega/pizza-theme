@@ -24,7 +24,6 @@ Template Name: Info Pizza
     <div class="main-content-pizzainfo">
       <?php while (have_posts()) {
         the_post(); ?>
-        <div class="infopizza-details">
           <div class="history-ingredients-container">
             <div class="history-info">
               <h2>History</h2>
@@ -41,7 +40,7 @@ Template Name: Info Pizza
                 echo '</ul>';
               }
               ?>
-            </div>
+            
           </div>
         </div>
 
