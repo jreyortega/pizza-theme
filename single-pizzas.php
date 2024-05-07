@@ -13,9 +13,6 @@ Template Name: Info Pizza
 <?php get_header(); ?>
 <div class="body-page-infopizza">
   <h1><?php the_title(); ?></h1>
-  <div class="pizza-price">
-      <p><?php echo "PRICE: " . $price . "€" ?></p>
-  </div>
   <div class="pizza-image-container">
     <?php the_post_thumbnail('blog'); ?>
   </div>
@@ -46,7 +43,9 @@ Template Name: Info Pizza
 
       <?php } ?>
     </div>
-    
+    <div class="pizza-price">
+      <p><?php echo "PRICE: " . $price . "€" ?></p>
+  </div>
   </main>
 </div>
 <?php get_footer() ?>
