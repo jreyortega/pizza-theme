@@ -8,7 +8,7 @@ Template Name: About Us
 
 <div class="body-page-about-us">
     <main class="container-about-us">
-        <div class="main-content">
+        <div class="aboutus-main-content">
             <?php while(have_posts()){ the_post();/*initialise WordPress Loop*/?>
             <h1><?php the_title();/*Title of your page */?></h1>
             <?php the_post_thumbnail('blog', array('class' => 'image-class'));/*Image*/?>
