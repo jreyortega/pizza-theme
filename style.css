@@ -881,7 +881,9 @@ main {
 
 
 .history-info{
+  width: 40rem;
   padding-right: 4rem;
+  overflow-y:scroll;
 }
 
 .ingredients-info{
@@ -896,6 +898,7 @@ main {
 
 .ingredients-info{
   border-left:0.3rem solid var(--mycolordarkred);
+  overflow-y: scroll;
 }
 
 .ingredients-info li {
@@ -908,7 +911,7 @@ main {
 
 .ingredients-info ul{
   list-style-type: disc;
-  overflow-y: scroll;
+ 
   text-align: center;
 }
 
@@ -938,6 +941,7 @@ main {
   text-align: justify;
   line-height: 1.5;
   text-align: center;
+  word-wrap: break-word;
 }
 
 .pizza-price {
