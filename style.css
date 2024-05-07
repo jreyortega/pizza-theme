@@ -1876,7 +1876,7 @@ main {
 }
 
 .sidebar-recent-entries.active{
-  transform:translateX(19rem)
+  transform:translateX(44rem)
 }
 
 .sidebar-recent-entries h3{
@@ -1915,7 +1915,7 @@ main {
 }
 
 .blog-sidebar-dropdown.active{
-  transform:translateX(19rem)
+  transform:translateX(43rem)
 }
 
 .blog-content{
@@ -1939,6 +1939,11 @@ main {
   transform:translateX(20rem)
 }
 
+.blog-content h1 {
+  text-align: center;
+  margin-left: 26rem;
+}
+
 @media (max-width:768px){
 
   .body-page-blog{
@@ -1949,7 +1954,17 @@ main {
   }
 
   .blog-content{
-    order:2
+    order: 2
+  }
+
+  .blog-content {
+    margin-left: -10rem;
+    margin-right: 2rem;
+  }
+
+  .blog-content h1 {
+    text-align: center;
+    margin-left: 6rem;
   }
 
   .container-sidebar-blog{
